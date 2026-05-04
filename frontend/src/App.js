@@ -5,7 +5,8 @@ import PollForm from './components/PollForm';
 import PollCard from './components/PollCard';
 import './App.css';
 
-const socket = io('http://localhost:3001');
+const BACKEND_URL = process.env.REACT_APP_BACKEND_URL || 'http://localhost:3001';
+const socket = io(BACKEND_URL);
 
 //fonction app
 function App() {
